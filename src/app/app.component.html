@@ -1,11 +1,4 @@
 <div class="app-shell">
-  <header class="topbar">
-    <a class="brand" routerLink="/resumen" aria-label="Mis Finanzas, ir al resumen"><span class="brand-mark">$</span><span>Mis Finanzas</span></a>
-    <nav aria-label="Navegación principal">
-      <a routerLink="/resumen" routerLinkActive="active">Resumen</a>
-      <a routerLink="/transacciones" routerLinkActive="active">Transacciones</a>
-      <a routerLink="/categorias" routerLinkActive="active">Categorías</a>
-    </nav>
-  </header>
+  @if (auth.user()) { <header class="topbar"><a class="brand" routerLink="/resumen"><span class="brand-mark">$</span><span>Mis Finanzas</span></a><nav aria-label="Navegación principal"><a routerLink="/resumen" routerLinkActive="active">Resumen</a><a routerLink="/transacciones" routerLinkActive="active">Transacciones</a><a routerLink="/categorias" routerLinkActive="active">Categorías</a><a routerLink="/login" (click)="auth.logout()">Salir</a></nav></header> }
   <main class="page-content"><router-outlet /></main>
 </div>

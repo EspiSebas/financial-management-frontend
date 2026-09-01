@@ -1,0 +1,14 @@
+<section class="auth-page">
+    <div class="auth-card"><a class="brand" routerLink="/login"><span>$</span> Mis Finanzas</a>
+        <p class="eyebrow">BIENVENIDO DE NUEVO</p>
+        <h1>Inicia sesión</h1>
+        <p class="subtitle">Accede a tus movimientos y mantén tus finanzas bajo control.</p>
+        <form (ngSubmit)="submit()"><label>Correo electrónico<input type="email" name="email"
+                    [(ngModel)]="credentials.email" required autocomplete="email"
+                    placeholder="tu@correo.com"></label><label>Contraseña<input type="password" name="password"
+                    [(ngModel)]="credentials.password" required autocomplete="current-password"
+                    placeholder="••••••••"></label>@if (error) { <p class="error">{{ error }}</p> }<button type="submit"
+                [disabled]="loading">{{ loading ? 'Ingresando...' : 'Iniciar sesión' }}</button></form>
+        <p class="alternative">¿Aún no tienes una cuenta? <a routerLink="/registro">Créala ahora</a></p>
+    </div>
+</section>

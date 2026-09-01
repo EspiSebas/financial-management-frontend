@@ -1,9 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-
-@Component({
-  selector: 'app-root', standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './app.component.html', styleUrl: './app.component.css'
-})
-export class AppComponent {}
+import { AuthService } from './core/auth/auth.service';
+@Component({ selector: 'app-root', standalone: true, imports: [RouterOutlet, RouterLink, RouterLinkActive], templateUrl: './app.component.html', styleUrl: './app.component.css' })
+export class AppComponent { readonly auth = inject(AuthService); }

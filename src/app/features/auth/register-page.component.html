@@ -1,0 +1,15 @@
+<section class="auth-page">
+    <div class="auth-card"><a class="brand" routerLink="/login"><span>$</span> Mis Finanzas</a>
+        <p class="eyebrow">EMPIEZA HOY</p>
+        <h1>Crea tu cuenta</h1>
+        <p class="subtitle">Tus categorías y transacciones estarán asociadas únicamente a tu cuenta.</p>
+        <form (ngSubmit)="submit()"><label>Nombre completo<input name="name" [(ngModel)]="account.name" required
+                    autocomplete="name" placeholder="Tu nombre"></label><label>Correo electrónico<input type="email"
+                    name="email" [(ngModel)]="account.email" required autocomplete="email"
+                    placeholder="tu@correo.com"></label><label>Contraseña<input type="password" name="password"
+                    [(ngModel)]="account.password" required minlength="6" autocomplete="new-password"
+                    placeholder="Mínimo 6 caracteres"></label>@if (error) { <p class="error">{{ error }}</p> }<button
+                type="submit" [disabled]="loading">{{ loading ? 'Creando cuenta...' : 'Crear cuenta' }}</button></form>
+        <p class="alternative">¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a></p>
+    </div>
+</section>
