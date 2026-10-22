@@ -1,9 +1,13 @@
 <div class="app-shell">
+<<<<<<< HEAD
   @if (auth.user()) { <header class="topbar"><a class="brand" routerLink="/resumen"><span
         class="brand-mark">$</span><span>Mis Finanzas</span></a>
     <nav aria-label="Navegación principal"><a routerLink="/resumen" routerLinkActive="active">Resumen</a><a
         routerLink="/transacciones" routerLinkActive="active">Transacciones</a><a routerLink="/categorias"
         routerLinkActive="active">Categorías</a><a routerLink="/login" (click)="auth.logout()">Salir</a></nav>
   </header> }
+=======
+  @if (auth.user()) { <header class="topbar"><a class="brand" routerLink="/resumen"><span class="brand-mark">$</span><span>Mis Finanzas</span></a><nav aria-label="Navegación principal"><a routerLink="/resumen" routerLinkActive="active">Resumen</a><a routerLink="/transacciones" routerLinkActive="active">Transacciones</a><a routerLink="/categorias" routerLinkActive="active">Categorías</a><a routerLink="/login" (click)="auth.logout()">Salir</a></nav></header> }
+>>>>>>> 18abcddd6eda0110464f5bced7309bd369ed09d8
   <main class="page-content"><router-outlet /></main>
 </div>
